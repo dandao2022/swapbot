@@ -1,8 +1,12 @@
 {
   "name": "dandao",
-  "version": "1.1.8",
+  "version": "1.2.0",
   "description": "电报uniswap交易bot",
   "main": "build/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dandao2022/swapbot.git"
+  },
   "scripts": {
     "debugger": "cross-env NODE_ENV=development nodemon  --watch ./src -e  ts,tsx  --exec node --inspect -r ts-node/register  ./src/test.ts",
     "build": "cross-env NODE_ENV=production webpack",
