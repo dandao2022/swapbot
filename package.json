@@ -1,0 +1,58 @@
+{
+  "name": "dandao",
+  "version": "1.1.8",
+  "description": "电报uniswap交易bot",
+  "main": "build/main.js",
+  "scripts": {
+    "debugger": "cross-env NODE_ENV=development nodemon  --watch ./src -e  ts,tsx  --exec node --inspect -r ts-node/register  ./src/test.ts",
+    "build": "cross-env NODE_ENV=production webpack",
+    "buildTest": "cross-env NODE_ENV=dev webpack"
+  },
+  "keywords": [
+    "Ethereum",
+    "TypeScript",
+    "API",
+    "Web3",
+    "Telegram",
+    "Uniswap",
+    "Bot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ethersproject/solidity": "^5.7.0",
+    "@types/node-telegram-bot-api": "^0.61.6",
+    "@uniswap/sdk": "^3.0.3",
+    "@uniswap/sdk-core": "^3.2.2",
+    "@uniswap/v3-sdk": "^3.9.0",
+    "@walletconnect/web3-provider": "^1.8.0",
+    "axios": "^1.4.0",
+    "bignumber.js": "^9.1.1",
+    "dayjs": "^1.11.8",
+    "dns-packet": "^5.6.0",
+    "ethers": "^5.7.2",
+    "eventemitter3": "^5.0.1",
+    "koa-log4": "^2.3.2",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "node-schedule": "^2.1.1",
+    "node-telegram-bot-api": "^0.61.0",
+    "nodemon": "^2.0.22",
+    "uuid": "^9.0.0",
+    "web3": "^1.9.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "externals-dependencies": "^1.0.4",
+    "javascript-obfuscator": "^4.0.2",
+    "terser-webpack-plugin": "^5.3.9",
+    "path": "^0.12.7",
+    "ts-node": "^10.9.1",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-obfuscator": "^3.5.1"
+  }
+}
