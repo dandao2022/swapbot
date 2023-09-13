@@ -1,27 +1,6 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const WebpackObfuscator = require("webpack-obfuscator");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const plugins = () => {
-  if (process.env.NODE_ENV == "production") {
-    return [
-      new CleanWebpackPlugin(),
-      new WebpackObfuscator(
-        {
-          rotateStringArray: true,
-        },
-        []
-      )
-    ];
-  } else if (process.env.NODE_ENV == "dev") {
-    return [
-      new CleanWebpackPlugin()
-    ];
-  } else {
-    return [new CleanWebpackPlugin()];
-  }
-};
 module.exports = {
   mode: "production",
   optimization: {
@@ -29,7 +8,7 @@ module.exports = {
       chunks: "all",
       minSize: 30 * 1024, // 大于30kb的才会被分割
     },
-    minimize: process.env.NODE_ENV == "production" ? true : false,
+    minimize: false,
     minimizer: [
       // 配置生产环境的压缩方案：js和css
       new TerserWebpackPlugin({
@@ -89,5 +68,5 @@ module.exports = {
       },
     ],
   },
-  plugins: plugins(),
+  plugins: [new CleanWebpackPlugin()],
 };
