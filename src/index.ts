@@ -8,6 +8,7 @@ import { batchGetBaseData } from "./utils/fetch"
 import { getToken, computedV3PairAddress, computedV3Price, batchV3Pool, configInitialization } from "./utils/help"
 import { getDanDaoContract, getDanDaoNFTContract } from "./utils/fetch"
 import EventEmiter from "./utils/eventEmiter";
+export * from "./bot"
 export * from "./erc20/handle"
 export * from "./config/constrants"
 export * from "./erc20/event"

@@ -38,13 +38,7 @@ module.exports = {
     ],
   },
   entry: () => {
-    if (process.env.NODE_ENV == "production") {
-      return "./src/bot.ts";
-    } else if (process.env.NODE_ENV == "dev") {
-      return "./src/bot.ts";
-    } else {
-      return "./src/index.ts";
-    }
+    return "./src/index.ts";
   },
   output: {
     path: path.resolve(__dirname, "build"),

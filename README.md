@@ -1,20 +1,24 @@
 # DAN DAO Telegram Bot
-基于uniswap的电报机器人，支持eth，arb，goerli
 
-## 使用npm
+基于 uniswap 的电报机器人，支持 eth，arb，goerli
+
+## 使用 npm
+
 ```bash
 npm install dandao
 
 ```
 
-## 导入mysql
-请先下载[mysql文件](https://github.com/dandao2022/swapbot/blob/main/src/db/dandao.sql)，并导入。
+## 导入 mysql
 
-## 使用DANDAO
+请先下载[mysql 文件](https://github.com/dandao2022/swapbot/blob/main/src/db/dandao.sql)，并导入。
+
+## 使用 DANDAO
+
 ```bash
-import DANDAO from "dandao"
+import {swapBot} from "dandao"
 
-new DANDAO({
+new swapBot({
     token: "电报token",
     adminName: "电报管理员username",
     chainIds: [1],
@@ -30,6 +34,7 @@ new DANDAO({
 ```
 
 ## 指令
+
 ```bash
 /menu 首页
 
@@ -43,7 +48,7 @@ new DANDAO({
 
 ![](https://github.com/dandao2022/swapbot/blob/main/src/assets/5.png?raw=true)
 
-## top推送
+## top 推送
 
 ![](https://github.com/dandao2022/swapbot/blob/main/src/assets/2.png?raw=true)
 

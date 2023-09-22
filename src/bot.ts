@@ -7,7 +7,7 @@ import DANDAO, { initParams, getProvider, getGasPrice, addContract, fastGetContr
 import { homeTemplate, walletTemplate, addWalletTemplate, goBackHomeTemplate, contractTemplate, editorContractTemplate, pickerWalletTempalte, pendingTamplate, errorTamplate, buySuccessTemplate, editorBuySuccessTemplate, sellSuccessTemplate, editorSellSuccessTemplate, networkTemplate, watchTemplate, watchLogBuyTemplate, watchLogSellTemplate, editorWatchLogBuyTemplate, editorWatchLogSellTemplate, handleWatchTemplate, pickerFollowWalletTempalte, chainEnum, createContractTemplate, topFifteenMinutesTemplate, topFiveMinutesTemplate, rushTemplate, rushDetailTemplate, editorRushDetailTemplate, pickerTaskWalletTempalte } from './utils/templates';
 import Db from './db';
 import BigNumber from 'bignumber.js';
-class NewBot {
+export class swapBot {
     bot: Bot
     isCheckingPool = false
     isCheckingPrice = false
@@ -2782,5 +2782,3 @@ class NewBot {
         this.switchRouter(query)
     }
 }
-
-export default NewBot
