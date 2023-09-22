@@ -1,6 +1,6 @@
 {
   "name": "dandao",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "电报uniswap交易bot",
   "main": "build/main.js",
   "repository": {

@@ -32,7 +32,7 @@ new swapBot({
 })
 
 ```
-
+[点击查看API](https://github.com/dandao2022/swapbot/wiki/API)只列出了几个较为常用的api，大家可在代码中自行查看更多调用。
 ## 指令
 
 ```bash

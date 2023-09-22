@@ -266,6 +266,9 @@ export const computedPancakeV3PairAddress = (tokenA: string | Token, tokenB: str
 }
 //获取web3
 export const getProvider = (chainID: number) => {
+    if(!Config[chainID].provider){
+        configInitialization([chainID])
+    }
     return Config[chainID].provider
 }
 //获取全局配置

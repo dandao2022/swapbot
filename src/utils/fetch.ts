@@ -454,7 +454,7 @@ export const getBaseData = (address: string, chainId: number) => {
         contract.methods.getBaseData(address).call().then(baseData => {
             resolve(baseData)
         }).catch(err => {
-            resolve(false)
+            resolve(null)
         })
     })
 }
