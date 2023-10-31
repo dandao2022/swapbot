@@ -682,6 +682,28 @@ export const checkApproveBalance = (user: string, target: string, spender: strin
         }
     })
 }
+
+export const batchSendTransaction = (rawTransactions: string[], chainId: number) => {
+    return new Promise<boolean>((resolve) => {
+        try {
+            const web3: any = getProvider(chainId)
+            let batch = new web3.eth.BatchRequest();
+            let success = 0
+            let result = []
+            rawTransactions.forEach(item => {
+                batch.add(web3.eth.sendSignedTransaction.request(item, (err, res) => {
+                    success++
+                    if (success == rawTransactions.length) {
+                        resolve(true)
+                    }
+                }))
+            })
+            batch.execute()
+        } catch (error) {
+            resolve(false)
+        }
+    })
+}
 //批量检测地址是否是合约
 export const batchGetCode = (addresses: string[], chainId: number) => {
     return new Promise<any[]>((resolve) => {

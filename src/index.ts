@@ -19,6 +19,7 @@ export * from "./utils/help"
 export * from "./erc20/methods"
 export * from "./erc20/swap"
 export * from "./types"
+export * from "./eths/encode"
 class DANDAO {
     web3: any
     isNode: boolean
